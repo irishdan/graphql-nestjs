@@ -20,7 +20,6 @@ import { WeatherService } from '~/weather/weather.service';
     }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      // autoSchemaFile: 'schema.gql',
       autoSchemaFile: '../../packages/schema/schema.graphql', // write inside the monorepo
       sortSchema: true,
     }),

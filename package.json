@@ -1,7 +1,7 @@
 {
-  "name": "mynstream",
+  "name": "nestjs-graphql",
   "version": "0.0.1",
-  "description": "Its a monorepo for the mynstream tech test",
+  "description": "Its a monorepo",
   "author": "danbyrne",
   "license": "UNLICENSED",
   "private": true,

@@ -1,23 +1,28 @@
-# Nestjs graphql API + React client example
+# NestJS GraphQL API + React Client Example
 
-## Install
+This project demonstrates a full-stack application built with **NestJS**, **GraphQL**, **React**, and **Redis**.
+
+Since I’m not deeply experienced with GraphQL, I chose NestJS’s **code-first** approach, which let me lean on a framework I know well (NestJS) while learning and applying GraphQL concepts.
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
- - docker
- - node >= 22.0.0
- - yarn
+- **Docker** (for running Redis)
+- **Node.js >= 22.0.0**
+- **Yarn**
 
-Docker hosts Redis; the API and web client run locally (hence the Node/Yarn requirement).
-Both API and client live in a Turborepo, so the quickest way to get everything up is:
+The project is structured as a **Turborepo** monorepo. Redis runs inside Docker, while the API and web client run locally.
+
+To spin everything up:
 
 ```bash
 yarn install
 yarn dev
 ```
-
 website is here http://localhost:5173/ (May need a manual reload on first run)
 api is here http://localhost:3000/
-
 
 ## Manual install
 
@@ -42,23 +47,42 @@ yarn dev
 
 ```
 
-## AI 
+## Use of AI
 
-AI was used to create the algorithms for calculating the activity scores. 
-These clearly need tweaking
+AI tools were used in the following ways:
 
-## Improvements
+- Activity scoring algorithms: AI helped generate the initial heuristics. These still need refinement, as results can be inaccurate (e.g., inland cities getting surf scores of 20/100).
+- GraphQL setup: Since I’m less familiar with GraphQL, I consulted AI on configuring Apollo Client in the React frontend and designing the schema.
 
-This I not production ready code:
+## Improvements Needed
 
-### Testing
+This code is not production-ready. With more time, I would focus on the following areas:
 
-both unit and end to tests have been setup but the coverage is nowhere near where it should be.
+✅ Testing
 
-### Logging/Oberservability
+Unit and end-to-end tests exist but coverage is incomplete.
 
-### Error handling
+✅ Logging & Observability
 
-### Algorithm improvements
+Proper logging, tracing, and metrics are missing.
 
-### UI/UX
+✅ Error Handling
+
+Error handling in the API is minimal and should be hardened.
+
+✅ Algorithm Refinement
+
+Improve the scoring logic to better reflect real conditions.
+Example: some inland locations rank too high for surfing.
+
+✅ UI/UX
+
+The location form and general frontend UX need significant polish.
+
+✅ GraphQL Codegen
+
+I would leverage GraphQL Code Generator more fully to provide stronger type safety across the stack.
+
+## Summary
+This project is a starting point for experimenting with NestJS + GraphQL + React.
+It highlights the architectural foundations, demonstrates integration with Redis, and leaves room for iteration on scoring logic, error handling, and user experience.
