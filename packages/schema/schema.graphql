@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""activities"""
+type ActivitiesResponseDto {
+  country: String!
+  indoor_sightseeing: ActivityBlock
+  outdoor_sightseeing: ActivityBlock
+  placeName: String!
+  skiing: ActivityBlock
+  surfing: ActivityBlock
+}
+
+type ActivityBlock {
+  days: [DayScore!]!
+}
+
+type DayScore {
+  date: String!
+  score: Int!
+}
+
+type Query {
+  activities(city: String!): ActivitiesResponseDto!
+}

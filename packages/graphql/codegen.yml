@@ -1,0 +1,19 @@
+schema: ../schema/schema.graphql
+documents:
+  - ../../apps/web/src/**/*.{ts,tsx,graphql,gql}
+generates:
+  src/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      reactApolloVersion: 4
+      avoidOptionals: true
+      immutableTypes: false
+      skipTypename: false
+      enumsAsTypes: true
+      defaultScalarType: unknown
+      scalars:
+        DateTime: string

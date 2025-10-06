@@ -1,0 +1,20 @@
+{
+  "pipeline": {
+    "docker:up": {
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["docker:up"],
+      "cache": false
+    },
+    "type-check": {
+      "outputs": []
+    },
+    "build": {
+      "dependsOn": ["type-check"],
+      "outputs": ["dist/**"]
+    },
+    "test:unit": {},
+    "test:e2e": {}
+  }
+}

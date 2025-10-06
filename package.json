@@ -1,0 +1,22 @@
+{
+  "name": "mynstream",
+  "version": "0.0.1",
+  "description": "Its a monorepo for the mynstream tech test",
+  "author": "danbyrne",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "turbo": "^1.11.2"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "test": "turbo test"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
